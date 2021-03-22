@@ -1,0 +1,115 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+ }
+ body{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background-color: black;
+     font-family: 'Oswald', sans-serif;
+ }
+ #clock h2{
+     position: relative;
+     color: white;
+     text-align: center;
+     margin: 5px 0px;
+     font-weight: 700;
+     text-transform: uppercase;
+     letter-spacing: 4px;
+     font-size: 15px;
+     right: 40px;
+ }
+ #clock #time{
+     display: flex;
+ }
+ #clock #time div{
+     position: relative; 
+     margin: 0 3px;
+     -webkit-box-reflect: below 3px linear-gradient(transparent,rgba(0, 0, 0, 0.5));
+     animation-name: clock;
+     animation-duration: 4s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+ }
+ @keyframes clock {
+     0%{
+         top: 0px;
+     }
+     50%{
+         top:40px;
+     }
+     100%{
+         top: 0px;
+     }
+ }
+ #clock #time div span{
+    /* position: relative;not understand */
+    /* display: block; */
+    width: 100px;
+     height: 80px;
+    background-color: cornflowerblue;
+    color:white ;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    /* z-index: 10;not understand */
+    box-shadow: 0 0 0 1px rgb(0, 0, 0,0.2);
+ }
+ #clock #time  div span:nth-child(2)
+ {
+     height: 30px;
+     font-size: 0.7em;
+     letter-spacing: 0.2em;
+     font-weight: 500;
+     /* z-index: 9;not understand */
+     box-shadow: none;
+     background-color: #117fda;
+     text-transform: uppercase;
+ }
+ #clock #time  div:nth-last-child(2)  span
+ {
+    background-color: #ff006a;
+ }
+ #clock #time  div:nth-last-child(2) span:nth-last-child(2)
+ {
+    background-color:#ec0062;
+ }
+ #clock #time  div:last-child{
+    background-color: transparent;
+      margin-bottom: 0px;
+ }
+ #clock #time  div:last-child  span:last-child{
+   background-color: transparent; 
+   margin-left: 25px;
+   color: white;
+    position: relative ;
+   top: 38px;
+   right: 32px;
+   font-size: 70px; 
+ }
+ #name{
+     position:absolute;
+  top: 150px;
+  text-align: center;
+ 
+    color: rgb(247, 239, 239);
+   animation-name: cloc;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   font-family: 'Oswald', sans-serif;
+ }
+ @keyframes cloc {
+     0%{
+         font-size: 20px;
+         color: rgb(229, 199, 160);
+     }
+     100%{
+        font-size: 50px;
+     }
+ } 
